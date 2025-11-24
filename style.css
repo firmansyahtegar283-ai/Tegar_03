@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(140deg, #1e1e1e, #2d2d2d, #1b1b1b);
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    margin-top: 10vh;
+    padding: 20px;
+}
+
+.title {
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.text {
+    font-size: 20px;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.subtitle {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    margin: 10px 0;
+    font-size: 30px;
+    color: #ff7b8a;
+}
+
+.btn {
+    background: #ff6b81;
+    border: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 10px;
+    color: white;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ff4757;
+    transform: scale(1.05);
+}
+
+.box {
+    margin-top: 25px;
+    padding: 20px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+}
+
+.hidden {
+    display: none;
+}
+
+.extra {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #ffd1d7;
+    line-height: 1.5;
+}
+
+/* -------- Animasi Hati Jatuh -------- */
+
+#falling-hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.heart {
+    position: absolute;
+    top: -10%;
+    width: 25px;
+    height: 25px;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/833/833472.png');
+    background-size: cover;
+    opacity: 0.9;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-20px) rotate(0deg); }
+    100% { transform: translateY(110vh) rotate(360deg); }
+}
